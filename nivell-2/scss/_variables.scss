@@ -1,0 +1,27 @@
+// Typography
+@import "https://fonts.googleapis.com/css?family=Lato:300&display=swap";
+$font-main: "Lato";
+$font-size:3.5vw;
+
+// Colors
+$text-color: white;
+$color-1:#244F75;
+$color-2:#60BFBF;
+$color-3:#8C4B7E;
+$color-4:#F8BB44;
+$color-5:#F24B4B;
+
+// Layout
+$height: 100vh;
+$text-align: center;
+
+// Animation Timing Function
+$bezier: ease-out;
+$animation-duration: ( 
+    "stripe-1": 0.5s, 
+    "stripe-2": 0.8s,
+    "stripe-3": 0.7s,
+    "stripe-4": 1s,
+    "stripe-5": 1.1s
+    )
+
