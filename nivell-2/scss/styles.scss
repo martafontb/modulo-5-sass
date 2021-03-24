@@ -3,10 +3,18 @@
 @import './variables';
 
 
-
 @function time($duration) {
     @return map-get($animation-duration, $duration);
 }
+
+@mixin transition {
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      .strip_content {
+      animation-timing-function: $bezier;
+      }
+    }
+  }
 
 @mixin flexCenter {
     display:flex;
@@ -37,7 +45,7 @@ h1 {
   overflow: hidden;
   display: flex;
   cursor: pointer;
-    
+
     .strip {
     @include flexCenter;
     @include stripLayout;
@@ -45,7 +53,7 @@ h1 {
     width: 19.9vw;
     margin: 0.1vw;
     overflow: hidden;
-    
+
         .strip_content {
         @include flexCenter;
         @include stripLayout;
@@ -80,55 +88,61 @@ h1 {
 				opacity: 0.2;
 			}
 		}
-	} 
+	}
 }
+
+// @for $i from 1 through 5 {
+//   .strip {
+//         &:nth-child( #{$i} ) {
+//             .strip_content {
+//             animation-timing-function: $bezier;
+//             }
+//           }
+//         }
+//       }
+
 
 /* strips 1-5: nth-child 1-5 */
 .strip {
-  
-    &:nth-child(1) {
-        .strip_content {
-        background-color: $color-1;
-        animation-name: strip--u4rx9pe;
-        animation-duration: time(stripe-1);
-        animation-timing-function: $bezier;
-        }
+
+        &:nth-child(1) {
+          .strip_content {
+          background-color: $color-1;
+          animation-name: strip--u4rx9pe;
+          animation-duration: time(stripe-1);
+          }
      }
 
-    &:nth-child(2) {
-        .strip_content {
-        background-color: $color-2;
-        animation-name: strip--u4rx9pg;
-        animation-duration: time(stripe-2);
-        animation-timing-function: $bezier;
-        }
+        &:nth-child(2) {
+          .strip_content {
+          background-color: $color-2;
+          animation-name: strip--u4rx9pg;
+          animation-duration: time(stripe-2);
+          }
     }
 
-&:nth-child(3) {
-        .strip_content {
-        background-color: $color-3;
-        animation-name: strip--u4rx9q8;
-        animation-duration: time(stripe-3);
-        animation-timing-function: $bezier;
-        }
+        &:nth-child(3) {
+          .strip_content {
+          background-color: $color-3;
+          animation-name: strip--u4rx9q8;
+          animation-duration: time(stripe-3);
+          }
     }
 
-&:nth-child(4) {
-        .strip_content {
-        background-color: $color-4;
-        animation-name: strip--u4rx9qn;
-        animation-duration: time(stripe-4);
-        animation-timing-function: $bezier;
-        }
+        &:nth-child(4) {
+          .strip_content {
+          background-color: $color-4;
+          animation-name: strip--u4rx9qn;
+          animation-duration: time(stripe-4);
+          }
     }
 
         &:nth-child(5) {
-        .strip_content {
-        background-color: $color-5;
-        animation-name: strip--u4rx9r0;
-        animation-duration: time(stripe-5);
-        animation-timing-function: $bezier;
-      }
+          .strip_content {
+          background-color: $color-5;
+          animation-name: strip--u4rx9r0;
+          animation-duration: time(stripe-5);
+        }
     }
   }
 
