@@ -124,36 +124,51 @@ h1 {
   opacity: 0.2;
 }
 
+.strip:nth-child(1) .strip_content {
+  animation-timing-function: ease-out;
+}
+
+.strip:nth-child(2) .strip_content {
+  animation-timing-function: ease-out;
+}
+
+.strip:nth-child(3) .strip_content {
+  animation-timing-function: ease-out;
+}
+
+.strip:nth-child(4) .strip_content {
+  animation-timing-function: ease-out;
+}
+
+.strip:nth-child(5) .strip_content {
+  animation-timing-function: ease-out;
+}
+
 /* strips 1-5: nth-child 1-5 */
 .strip:nth-child(1) .strip_content {
   background-color: #244F75;
   animation-name: strip--u4rx9pe;
   animation-duration: 0.5s;
-  animation-timing-function: ease-out;
 }
 .strip:nth-child(2) .strip_content {
   background-color: #60BFBF;
   animation-name: strip--u4rx9pg;
   animation-duration: 0.8s;
-  animation-timing-function: ease-out;
 }
 .strip:nth-child(3) .strip_content {
   background-color: #8C4B7E;
   animation-name: strip--u4rx9q8;
   animation-duration: 0.7s;
-  animation-timing-function: ease-out;
 }
 .strip:nth-child(4) .strip_content {
   background-color: #F8BB44;
   animation-name: strip--u4rx9qn;
   animation-duration: 1s;
-  animation-timing-function: ease-out;
 }
 .strip:nth-child(5) .strip_content {
   background-color: #F24B4B;
   animation-name: strip--u4rx9r0;
   animation-duration: 1.1s;
-  animation-timing-function: ease-out;
 }
 
 @keyframes strip--u4rx9pe {

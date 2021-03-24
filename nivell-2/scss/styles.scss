@@ -7,14 +7,6 @@
     @return map-get($animation-duration, $duration);
 }
 
-@mixin transition {
-  @for $i from 1 through 5 {
-    &:nth-child(#{$i}) {
-      .strip_content {
-      animation-timing-function: $bezier;
-      }
-    }
-  }
 
 @mixin flexCenter {
     display:flex;
@@ -91,15 +83,15 @@ h1 {
 	}
 }
 
-// @for $i from 1 through 5 {
-//   .strip {
-//         &:nth-child( #{$i} ) {
-//             .strip_content {
-//             animation-timing-function: $bezier;
-//             }
-//           }
-//         }
-//       }
+@for $i from 1 through 5 {
+  .strip {
+        &:nth-child( #{$i} ) {
+            .strip_content {
+            animation-timing-function: $bezier;
+            }
+          }
+        }
+      }
 
 
 /* strips 1-5: nth-child 1-5 */
